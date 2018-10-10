@@ -1,18 +1,91 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <van-address-edit
+      :area-list="areaList"
+      :search-result="searchResult"
+      show-postal
+      show-delete
+      show-set-default
+      show-search-result
+      @save="onSave"
+      @delete="onDelete"
+      @change-detail="onChangeDetail"
+    />
+    <van-goods-action>
+      <van-goods-action-mini-btn 
+        icon="chat" 
+        text="客服" 
+        @click="onClickMiniBtn" />
+      <van-goods-action-mini-btn 
+        icon="cart" 
+        text="购物车" 
+        @click="onClickMiniBtn" />
+      <van-goods-action-big-btn 
+        text="加入购物车" 
+        @click="onClickBigBtn" />
+      <van-goods-action-big-btn 
+        text="立即购买" 
+        primary 
+        @click="onClickBigBtn" />
+    </van-goods-action>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import {
+  AddressEdit,
+  GoodsAction,
+  GoodsActionBigBtn,
+  GoodsActionMiniBtn,
+  Toast
+} from "vant";
 
 export default {
-  name: "home",
   components: {
-    HelloWorld
+    [AddressEdit.name]: AddressEdit,
+    [GoodsAction.name]: GoodsAction,
+    [GoodsActionBigBtn.name]: GoodsActionBigBtn,
+    [GoodsActionMiniBtn.name]: GoodsActionMiniBtn,
+    [Toast.name]: Toast
+  },
+  data() {
+    return {
+      areaList: {},
+      searchResult: []
+    };
+  },
+  mounted() {
+    console.log(this.dateFormat(11111111111111, "Y年M月D日 H时I分S秒"));
+  },
+  methods: {
+    onSave() {
+      Toast("save");
+    },
+    onDelete() {
+      Toast("delete");
+    },
+    onClickMiniBtn() {
+      Toast("点击图标");
+    },
+    onClickBigBtn() {
+      Toast("点击按钮");
+    },
+    onChangeDetail(val) {
+      if (val) {
+        this.searchResult = [
+          {
+            name: "黄龙万科中心",
+            address: "杭州市西湖区"
+          }
+        ];
+      } else {
+        this.searchResult = [];
+      }
+    }
   }
 };
 </script>
+<style lang="scss" scoped>
+.van-cell__title {
+  color: #00f;
+}
+</style>
