@@ -92,9 +92,3 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-$color: #0f0;
-.van-cell__title {
-  color: $color;
-}
-</style>
