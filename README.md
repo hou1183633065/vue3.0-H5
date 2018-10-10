@@ -1,9 +1,9 @@
 # vue3.0
-###安装vue3.0
+### 安装vue3.0
 npm install -g @vue/cli
 ### OR
 yarn global add @vue/cli
-###查看版本
+### 查看版本
 vue --version
 
 -进入项目运行vue ui 打开可视化界面进行配置
