@@ -38,14 +38,15 @@ import {
   GoodsActionMiniBtn,
   Toast
 } from "vant";
-
+import areaJson from '../assets/area.js'
 export default {
   components: {
     [AddressEdit.name]: AddressEdit,
     [GoodsAction.name]: GoodsAction,
     [GoodsActionBigBtn.name]: GoodsActionBigBtn,
     [GoodsActionMiniBtn.name]: GoodsActionMiniBtn,
-    [Toast.name]: Toast
+    [Toast.name]: Toast,
+    areaJson
   },
   data() {
     return {
@@ -54,6 +55,8 @@ export default {
     };
   },
   mounted() {
+    console.log(areaJson)
+    this.areaList = areaJson
     console.log(this.dateFormat(11111111111111, "Y年M月D日 H时I分S秒"));
   },
   methods: {
@@ -84,8 +87,9 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+$color: #0f0;
 .van-cell__title {
-  color: #00f;
+  color: $color;
 }
 </style>
