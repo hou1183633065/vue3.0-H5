@@ -38,7 +38,7 @@ import {
   GoodsActionMiniBtn,
   Toast
 } from "vant";
-import areaJson from '../assets/area.js'
+import areaJson from "../assets/area.js";
 export default {
   components: {
     [AddressEdit.name]: AddressEdit,
@@ -55,11 +55,16 @@ export default {
     };
   },
   mounted() {
-    console.log(areaJson)
-    this.areaList = areaJson
+    console.log(areaJson);
+    this.areaList = areaJson;
     console.log(this.dateFormat(11111111111111, "Y年M月D日 H时I分S秒"));
+    this.onLoad();
   },
   methods: {
+    async onLoad() {
+      var userLocation = await this.getUserLocation();
+      console.log(userLocation);
+    },
     onSave() {
       Toast("save");
     },

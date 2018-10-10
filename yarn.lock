@@ -919,9 +919,9 @@
     vue-template-es2015-compiler "^1.6.0"
 
 "@vue/eslint-config-prettier@^3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@vue/eslint-config-prettier/-/eslint-config-prettier-3.0.4.tgz#e895926625b06d865f9973271684bc61a15b33a7"
-  integrity sha512-A3Elc9YsqOz+zVk9dYLpMk+YMPI6einY67xyZjYTi1eKbhDvD28G/jLCW6dtM2V0ckMEUByAxf7oZmiv1CcSDQ==
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@vue/eslint-config-prettier/-/eslint-config-prettier-3.0.5.tgz#3f02260c3ba37d6fe7343c5a90f0bdf171e75616"
+  integrity sha512-TxUqk3WO2Q/B1g2K7TYOy7crCwiCIeMJajiUy7ESYI4tt9oKa7iN7x7G1qBSxWoJ2pUvLGWR1tNkKkWNX/zrfA==
   dependencies:
     eslint-config-prettier "^2.9.0"
     eslint-plugin-prettier "^2.6.2"
