@@ -8,7 +8,21 @@ module.exports = {
     name: "helloWorld",
     msTileColor: "#649C4C"
   },
-
+  configureWebpack: {
+    // 库文件加载重定向
+    externals: {
+      vue: "Vue",
+      "vue-router": "VueRouter",
+      vuex: "Vuex",
+      axios: "axios"
+      // 'vant': 'vant'
+    }
+    // resolve: {
+    //   alias: {
+    //     '@': ''
+    //   }
+    // }
+  },
   baseUrl: "/my-app/",
   outputDir: "dist1",
   assetsDir: "assets",

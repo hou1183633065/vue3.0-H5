@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <van-address-edit
+    <!-- <van-address-edit
       :area-list="areaList"
       :search-result="searchResult"
       show-postal
@@ -10,7 +10,14 @@
       @save="onSave"
       @delete="onDelete"
       @change-detail="onChangeDetail"
-    />
+    /> -->
+    <baidu-map class="map" center="北京" style="width: 100%;height: 300px;"></baidu-map>
+    <router-link to="./particles">
+      <van-button round type="danger">背景动画</van-button>
+    </router-link>
+    <router-link to="./BaiduMap">
+      <van-button round type="danger">百度地图</van-button>
+    </router-link>
     <van-goods-action>
       <van-goods-action-mini-btn 
         icon="chat" 
@@ -36,7 +43,8 @@ import {
   GoodsAction,
   GoodsActionBigBtn,
   GoodsActionMiniBtn,
-  Toast
+  Toast,
+  Button
 } from "vant";
 import areaJson from "../assets/area.js";
 export default {
@@ -46,6 +54,7 @@ export default {
     [GoodsActionBigBtn.name]: GoodsActionBigBtn,
     [GoodsActionMiniBtn.name]: GoodsActionMiniBtn,
     [Toast.name]: Toast,
+    [Button.name]: Button,
     areaJson
   },
   data() {
