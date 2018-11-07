@@ -16,12 +16,12 @@ export default new Router({
     {
       path: "/particles",
       name: "particles",
-      component: () => import('./views/particles.vue')
+      component: () => import("./views/particles.vue")
     },
     {
       path: "/BaiduMap",
       name: "BaiduMap",
-      component: () => import('./views/BaiduMap.vue')
+      component: () => import("./views/BaiduMap.vue")
     }
   ]
 });

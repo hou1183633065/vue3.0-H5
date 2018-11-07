@@ -23,9 +23,9 @@ module.exports = {
     //   }
     // }
   },
-  baseUrl: "/my-app/",
-  outputDir: "dist1",
-  assetsDir: "assets",
+  baseUrl: '/my-app/',
+  outputDir: undefined,
+  assetsDir: 'assets',
   runtimeCompiler: true,
   productionSourceMap: false,
   parallel: undefined,
